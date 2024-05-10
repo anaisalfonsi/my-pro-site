@@ -1,0 +1,82 @@
+.television-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prompt-tv {
+  position: relative;
+  width: 260px;
+  height: 208px;
+  padding: var(--16px-1rem);
+  color: var(--white_main);
+  border: 2px solid transparent;
+  border-radius: 80px / 60px;
+  z-index: 20;
+}
+
+.prompt-tv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: -2px;
+  background: var(--dynamicGradient);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.prompt-tv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    87.44deg,
+    #0b0b0b 8.02%,
+    #1c1138 77.14%,
+    #36267e 98.37%
+  );
+  background-clip: padding-box;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.prompt-tv > h6 {
+  position: absolute;
+  top: 0;
+  font-family: var(--prompt-bold);
+  font-size: var(--15px-0rem938);
+  font-weight: 700;
+  color: var(--purpleGray);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.television-container .icon {
+  cursor: pointer;
+  color: var(--purpleGray);
+  margin: 0 var(--4px-0rem25);
+}
+
+.television-container .icon:hover {
+  color: var(--white_main);
+}
+
+.television-container .icon.active {
+  color: var(--orange_main);
+}
+
+.television-container .small-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.television-container .large-icon {
+  width: 36px;
+  height: 36px;
+}

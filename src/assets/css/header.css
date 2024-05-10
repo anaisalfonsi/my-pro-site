@@ -1,0 +1,182 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--16px);
+  background-color: var(--white_main);
+  z-index: 50;
+}
+
+header > div:first-child {
+  max-width: 1024px;
+}
+
+header .logo {
+  border: none;
+  margin-right: var(--8px);
+}
+
+header .logo > h3,
+header .brand-name > h3 {
+  font-size: var(--24px);
+  line-height: var(--30px);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+header .burger-zone {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+header .burger-zone .shapes {
+  width: 48px;
+  height: 48px;
+  transition: 0.5s ease;
+}
+
+header .burger-zone .xmark {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  transition: 0.5s ease;
+}
+
+header .burger-zone .xmark > span {
+  position: absolute;
+  display: inline-block;
+  width: 44px;
+  height: 8px;
+  background-color: var(--purple_main);
+  border-radius: 4px 0;
+}
+
+header .burger-zone .xmark > span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+header .burger-zone .xmark > span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+header .burger-zone .circle,
+header .burger-zone .square,
+header .burger-zone .pizza-slice {
+  width: 16px;
+  height: 16px;
+}
+
+header .burger-zone .triangle {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid var(--purple_main);
+}
+
+header .burger-zone .shapes > div:first-child {
+  margin-bottom: var(--2px);
+}
+
+header .burger-zone .shapes > div:nth-child(2) > div:first-child {
+  margin: 0 var(--2px);
+}
+
+header .menu-burger {
+  position: absolute;
+  display: none;
+  top: 72px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: var(--60px);
+  background-color: var(--white_main);
+  z-index: 1010; /*max z-index value */
+}
+
+header .menu-burger.show-menu {
+  display: block;
+}
+
+header .menu-burger ul {
+  margin: 0 var(--16px);
+}
+
+header .menu-burger li {
+  display: flex;
+  align-items: center;
+  gap: var(--32px);
+  margin: 0 var(--16px) var(--48px) var(--16px);
+  transition: all 2s ease;
+}
+
+header .menu-burger li.clicked {
+  background-color: var(--white_main);
+}
+
+header .menu-burger li > a {
+  font-size: var(--28px);
+  line-height: var(--42px);
+  border-bottom: none;
+  color: var(--black_main);
+}
+
+@media (min-width: 992px) {
+  header {
+    height: 80px;
+  }
+
+  header .burger-zone {
+    display: none;
+  }
+
+  header .menu-burger,
+  header .navbar,
+  header .navbar__container,
+  header .menu-burger ul {
+    height: 100%;
+  }
+
+  header .menu-burger {
+    display: block;
+    position: unset;
+    width: 100%;
+    padding-top: 0;
+    z-index: unset;
+    background-color: unset;
+  }
+
+  header .menu-burger ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+  }
+
+  header .menu-burger li {
+    gap: var(--8px);
+    margin: 0 var(--16px);
+  }
+
+  header .menu-burger li > a {
+    font-size: var(--16px);
+    line-height: var(--24px);
+  }
+
+  header .shape-box img {
+    width: 12px;
+    height: 12px;
+  }
+
+  header .shape-box #diamond {
+    width: 15px;
+  }
+  header .shape-box #triangle {
+    width: 16px;
+    height: 14px;
+  }
+}

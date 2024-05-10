@@ -1,0 +1,76 @@
+footer {
+  padding-top: 100px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: var(--60px) var(--20px);
+  background-color: var(--black_main);
+  color: var(--white_main);
+}
+
+.footer__container > .television-container {
+  margin: var(--60px);
+}
+
+.border-decoration {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    60deg,
+    var(--purple_main) 45%,
+    var(--orange_main) 75%,
+    var(--purple_main) 100%
+  );
+}
+
+.footer__container .logo {
+  display: none;
+}
+
+.footer__container .logo.mobile {
+  display: inline-block;
+}
+
+.footer__container p {
+  font-size: var(--16px);
+  color: var(--lightPurpleGray);
+  text-align: center;
+}
+
+.footer__container .heart-icon {
+  width: 17.12px;
+  height: 16px;
+}
+
+@media (min-width: 992px) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: unset;
+    height: 300px;
+    padding: var(--34px) var(--80px);
+  }
+
+  .footer__container .logo {
+    display: inline-block;
+  }
+
+  .footer__container .logo.mobile {
+    display: none;
+  }
+
+  .footer__container p {
+    text-align: left;
+  }
+
+  .footer__container br {
+    display: none;
+  }
+
+  .footer__container > .television-container {
+    margin: 0;
+  }
+}
