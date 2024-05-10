@@ -2,3 +2,7 @@ node_modules/
 .cache/
 public
 src/gatsby-types.d.ts
+.idea/
+.idea/workspace.xml
+.DS_Store
+/.DS_Store
