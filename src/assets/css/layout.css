@@ -694,16 +694,14 @@ label {
 @media (min-width: 992px) {
   .mobile-desktop__flex {
     flex-direction: row;
-    align-items: start;
-    justify-content: center;
   }
 
-  .mobile-desktop__flex > div,
+  /* .mobile-desktop__flex > div,
   .mobile-desktop__flex > li {
     width: 100%;
     padding: 0 var(--16px);
     min-height: 200px;
-  }
+  } */
 
   .default__margin-top {
     margin-top: var(--64px);

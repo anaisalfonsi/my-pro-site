@@ -6,7 +6,10 @@ import Layout from "../components/layout";
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
-      <Layout>Hello</Layout>
+      <Layout>
+        Idée animation : Jouer avec .screen-frame .screen-layer:last-child
+        display: flex;
+      </Layout>
     </>
   );
 };
