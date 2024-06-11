@@ -1,12 +1,37 @@
 .cover-illustration {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin: 0 80px;
 }
 
-.cover-illustration > div:first-child {
+.cover-illustration > div:nth-child(2) {
   margin-right: var(--32px);
+}
+
+#palmtree-svg {
+  position: absolute;
+  left: 36%;
+  bottom: 20px;
+  z-index: 10;
+}
+
+#palmtree-svg > img {
+  width: 240px;
+}
+
+#stone-svg > img {
+  width: 100px;
+}
+
+#me-working-svg > img {
+  width: 200px;
+}
+
+.stairs {
+  justify-content: flex-start;
+  margin-top: var(--40px);
 }
 
 .screen-border {
